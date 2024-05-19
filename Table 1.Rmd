@@ -1,0 +1,112 @@
+---
+title: "<span style='font-size: 16px;'>Table 1: SAOM Modeling of effects on friendship and disliking network evolution</span>"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-7btt">Effect</th>
+    <th class="tg-7btt">Interpretation</th>
+    <th class="tg-7btt">Graph Illustration</th>
+    <th class="tg-7btt">Expected Parameter</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">Outdegree (density)</td>
+    <td class="tg-0pky">Tendency of sending out ties arbitrarily</td>
+    <td class="tg-0pky"><br><br></td>
+    <td class="tg-c3ow">-</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Reciprocity</td>
+    <td class="tg-0pky">Tendency of reciprocating a received tie</td>
+    <td class="tg-0pky"><br><br></td>
+    <td class="tg-c3ow">+</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Transitive triplets</td>
+    <td class="tg-0pky">Tendency of transitive closure</td>
+    <td class="tg-0pky"><br><br></td>
+    <td class="tg-c3ow">+</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Indegree popularity - sqrt</td>
+    <td class="tg-0pky">Tendency of receiving more ties because of high indegree</td>
+    <td class="tg-0pky"><br><br></td>
+    <td class="tg-c3ow">+</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Outdegree activity - sqrt</td>
+    <td class="tg-0pky">Tendency of sending more ties because of high outdegree</td>
+    <td class="tg-0pky"><br><br></td>
+    <td class="tg-c3ow">+</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Gender Alter</td>
+    <td class="tg-0pky">Tendency of boys(value 1) receiving ties</td>
+    <td class="tg-0pky"><br><br></td>
+    <td class="tg-0pky">&minus;  for friendship network</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Gender Ego</td>
+    <td class="tg-0pky">Tendency of boys(value 1) sending ties</td>
+    <td class="tg-0pky"><br><br></td>
+    <td class="tg-0pky">&plus; for friendship network</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Same Gender</td>
+    <td class="tg-0pky">Gender Homophily</td>
+    <td class="tg-0pky"><br></td>
+    <td class="tg-0pky">&plus; for friendship network<br>&minus;  for disliking network</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Same Roma</td>
+    <td class="tg-0pky">Ethnic Homophily</td>
+    <td class="tg-0pky"><br></td>
+    <td class="tg-0pky">&plus; for friendship network<br>&minus;  for disliking network</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Gossip Perception(GP)</td>
+    <td class="tg-0pky">Tendency of sending a tie when a tie of GP is sent</td>
+    <td class="tg-0pky"><br></td>
+    <td class="tg-0pky">&minus; for friendship network<br>&plus; for disliking network</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">GP x Reciprocity</td>
+    <td class="tg-0pky">Tendency of sending a tie when a tie of GP is received</td>
+    <td class="tg-0pky"><br><br></td>
+    <td class="tg-0pky">&minus; for friendship network<br>&plus; for disliking network</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">WW=&gt;X shared outgoing GP</td>
+    <td class="tg-0pky">Tendency of sending a tie to another actor when there <br>exists a shared perceived gossiper</td>
+    <td class="tg-0pky"><br></td>
+    <td class="tg-0pky">&plus; for friendship network<br>&minus; for disliking network</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">WX=&gt;X closure of GP</td>
+    <td class="tg-0pky">Tendency of sending a tie to the friend/"enemy"of the <br>perceived gossiper</td>
+    <td class="tg-0pky"><br></td>
+    <td class="tg-0pky">&minus; for friendship &amp; disliking<br>&nbsp;&nbsp;&nbsp;network</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky" colspan="4">Note: <br>Solid arrows indicate existed ties. Dash arrows indicate newly created ties. Red arrows indicate gossip perception ties. The shape of circle and <br>triangle represent different gender or ethnicity.</td>
+  </tr>
+</tbody>
+</table>
